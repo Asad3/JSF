@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+	<h:head>
+	<title>Sign Up</title>
+	</h:head>
+	<h:body>
+		<f:view>
+			<h:form>
+					<table>
+					<tr>
+						<td> <h:messages showDetail="true" /> </td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Enter First Name : "/></td>
+						<td><h:inputText value="#{member.firstName}"/></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Enter Last Name : " /></td>
+						<td><h:inputText value="#{member.lastName}" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Enter your Email Address : "/></td>
+						<td><h:inputText value="#{member.email}" /></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Enter Password : "/></td>
+						<td><h:inputText value="#{member.password}"></h:inputText></td>
+					</tr>
+					<tr>
+					<td></td>
+					<td><h:commandButton value="Insert" action="#{member.addMember}"/></td>
+					</tr>
+				</table>
+			</h:form>
+		</f:view>
+	</h:body>
+</html>
